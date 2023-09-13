@@ -1,0 +1,837 @@
+/********** Template CSS start **********/
+:root {
+    --primary: #06A3DA;
+    --secondary: #F57E57;
+
+    --light: #EEF9FF;
+    --dark: #091E3E;
+}
+
+h1,
+h2,
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
+h3,
+h4,
+.font-weight-semi-bold {
+    font-weight: 600 !important;
+}
+
+h5,
+h6,
+.font-weight-medium {
+    font-weight: 500 !important;
+}
+
+.btn {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn-primary,
+.btn-secondary {
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    /* background: var(--secondary);
+    border-color: var(--secondary); */
+    background:#afca1f;
+    border-color: #afca1f;
+
+}
+
+.btn-secondary:hover {
+    /* background: var(--primary);
+    border-color: var(--primary); */
+    background:#afca1f;
+    border-color: #afca1f;
+}
+.btn-dark:hover {
+    /* background: var(--primary);
+    border-color: var(--primary); */
+    background:#afca1f;
+    border-color: #afca1f;
+}
+
+.btn-square {
+    width: 36px;
+    height: 36px;
+}
+
+.btn-sm-square {
+    width: 28px;
+    height: 28px;
+}
+
+.btn-lg-square {
+    width: 46px;
+    height: 46px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+.top-shape::before {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 100%;
+    top: 0;
+    left: -17px;
+    background: var(--primary);
+    transform: skew(40deg);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Jost', sans-serif;
+    padding: 35px 14px;
+    font-size: 17px;
+    color: var(--dark);
+    outline: none;
+    transition: .5s;
+}
+
+.sticky-top.navbar-light .navbar-nav .nav-link {
+    padding: 20px 15px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-light .navbar-nav .nav-link,
+    .sticky-top.navbar-light .navbar-nav .nav-link {
+        padding: 10px 0;
+    }
+}
+
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(9, 30, 62, .85);
+    z-index: 1;
+}
+
+@media (max-width: 576px) {
+    .carousel-caption h5 {
+        font-size: 10px;
+        font-weight: 300 !important;
+    }
+
+    .carousel-caption h1 {
+        font-size: 10px;
+        font-weight: 400 !important;
+    }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+@media (min-width: 991.98px) {
+    .banner {
+        position: relative;
+        margin-top: -90px;
+        z-index: 1;
+    }
+}
+
+.section-title h5::before {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 3px;
+    right: -55px;
+    bottom: 11px;
+    background: var(--primary);
+}
+
+.section-title h5::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 3px;
+    right: -75px;
+    bottom: 11px;
+    background: var(--secondary);
+}
+
+.twentytwenty-wrapper {
+    height: 100%;
+}
+
+.hero-header {
+    background: linear-gradient(rgba(9, 30, 62, .85), rgba(9, 30, 62, .85)), url(../img/carousel-1.jpg) center center no-repeat;
+    background-size: cover;
+}
+/* Appointment page banner  header*/
+.hero-header6 {
+    background: linear-gradient(rgba(9, 30, 62, .85), rgba(9, 30, 62, .85)), url(../img/Book\ Appoitment.jpeg) center center no-repeat;
+    background-size: cover;
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    position:realtive;
+}
+
+
+
+.bg-appointment {
+    background: linear-gradient(rgba(9, 30, 62, .85), rgba(9, 30, 62, .85)), url(../img/Team.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.appointment-form {
+    background: rgba(6, 163, 218, .7);
+}
+
+.service-item img,
+.service-item .bg-light,
+.service-item .bg-light h5,
+.team-item .team-text {
+    transition: .5s;
+}
+
+.service-item:hover img {
+    transform: scale(1.15);
+}
+
+.team-item .team-text::after,
+.service-item .bg-light::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    bottom: 0;
+    left: 15px;
+    right: 15px;
+    border-radius:100px / 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .7);
+    opacity: 0;
+    transition: .5s;
+    z-index: -1;
+}
+
+.team-item:hover .team-text::after,
+.service-item:hover .bg-light::after {
+    opacity: 1;
+}
+
+.bg-offer {
+    background:url(../img/carousel-1.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.offer-text {
+    background: rgba(6, 163, 218, .85);
+}
+
+.price-carousel .owl-nav {
+    position: absolute;
+    width: calc(100% + 45px);
+    height: 45px;
+    top: calc(50% - 22.5px);
+    left: -22.5px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transition: .5s;
+}
+
+.price-carousel:hover .owl-nav {
+    opacity: 1;
+}
+
+.price-carousel .owl-nav .owl-prev,
+.price-carousel .owl-nav .owl-next {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: var(--primary);
+    border-radius: 2px;
+    font-size: 22px;
+    transition: .5s;
+}
+
+.price-carousel .owl-nav .owl-prev:hover,
+.price-carousel .owl-nav .owl-next:hover {
+    background: var(--secondary);
+}
+
+.bg-testimonial {
+    /* background: linear-gradient(rgba(9, 30, 62, .85), rgba(9, 30, 62, .85)),url(../img/) center center no-repeat; */
+    background-size: cover;
+    /* background:rgba(0, 0, 0, 0.6); */
+    background:linear-gradient(rgba(9, 30, 62, .85), rgba(9, 30, 62, .85));
+    
+}
+
+/* .testimonial-carousel {
+    background: rgba(6, 163, 218, .85);
+} */
+.testimonial-carousel .owl-nav {
+    position: absolute;
+    width: calc(100% + 46px);
+    height: 46px;
+    top: calc(50% - 23px);
+    left: -23px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.testimonial-carousel .owl-nav .owl-prev,
+.testimonial-carousel .owl-nav .owl-next {
+    position: relative;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    border-radius: 2px;
+    font-size: 22px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-nav .owl-prev:hover,
+.testimonial-carousel .owl-nav .owl-next:hover {
+    background:#afca1f;
+}
+
+.testimonial-carousel .owl-item img {
+    width: 120px;
+    height: 120px;
+} 
+
+/* why we choose as */
+.parallax {
+    background: linear-gradient(rgba(9, 30, 62, .85), rgba(9, 30, 62, .85)), url(../img/why\ we\ choose.jpeg) center center no-repeat;
+
+    width: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    position: realtive;
+  }
+  #p-con{
+
+        position: absolute;
+        margin: 0 auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        z-index: 10;
+
+      
+  }
+
+
+
+  /*** Service ***/
+.service-item {
+    position: relative;
+    height: 300px;
+    padding: 0 30px;
+    transition: .5s;
+}
+
+.service-item .service-icon {
+    margin-bottom: 30px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    border-radius: 2px;
+    transform: rotate(-45deg);
+}
+
+.service-item .service-icon i {
+    transform: rotate(45deg);
+}
+
+.service-item a.btn {
+    position: absolute;
+    width: 60px;
+    bottom: -48px;
+    left: 50%;
+    margin-left: -30px;
+    opacity: 0;
+}
+
+.service-item:hover a.btn {
+    bottom: -24px;
+    opacity: 1;
+}
+
+
+
+
+/* nav bar changes start*/
+@media (max-width: 1024px) 
+{
+.px-5 {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+}
+}
+/* nav bar changes end */
+
+
+/* counter effect */
+.counter-box {
+	 display: flex; 
+	background: #f6f6f6;
+	padding: 40px 20px 37px;
+	text-align: center;
+}
+
+.counter-box p {
+
+	margin: 5px 0 0;
+	padding: 0;
+	color: #909090;
+	/* font-size: 20px; */
+	font-weight: 800
+}
+
+.counter-box i {
+	font-size: 60px;
+	margin: 0 0 15px;
+	color: #d2d2d2
+}
+
+.counter { 
+
+	/* font-size: 25px; */
+	font-weight: 700;
+	line-height: 28px
+}
+
+/* .counter-box.colored {
+      background: #3acf87;
+} */
+
+.counter-box.colored p,
+.counter-box.colored i,
+.counter-box.colored .counter {
+	color: #fff
+}
+h1.counter::after{
+content:"+";
+} 
+
+/* Our dentist */
+
+
+  
+  /* The overlay effect (full height and width) - lays on top of the container and over the image */
+  .overlay {
+    position: absolute;
+    /* border: 2px solid #fff; */
+    top: 0;
+    left: 0;
+   z-index: 90;
+
+    transition: all 0.3s;
+   
+    background-color: rgba(0, 0, 0, 0.6);
+
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    transition: .3s ease;
+
+  }
+  
+  /* When you mouse over the container, the overlay text will "zoom" in display */
+  .single-box:hover .overlay {
+    transform: scale(1);
+
+    
+  }
+  .img-area:hover .overlay{
+    transform: scale(1);
+  }
+  
+  /* Some text inside the overlay, which is positioned in the middle vertically and horizontally */
+   .text {
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    transform: scale(0.05s);
+    
+  } 
+  .overlay text{
+    text-align :justify;
+    color:white;
+    /* padding-top: 40px; */
+    transform: scale(0.5);
+    padding: 20px; 
+    align-items: center;
+   } 
+
+   /* Dental services end  */
+/* .form-select{
+    min-width: 100px !important; 
+} */
+
+   /* Home page end */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* contact us banner */
+
+.hero-header4 {
+    background: linear-gradient(rgba(9, 30, 62, .85), rgba(9, 30, 62, .85)), url(../img/contact\ banner.jpeg) center center no-repeat;
+    background-size: cover;
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    position: realtive;
+}
+/* contact us banner */
+
+
+
+
+/* Healthy packagr banner */
+.hero-header1 {
+    background: linear-gradient(rgba(9, 30, 62, .85), rgba(9, 30, 62, .85)), url(../img/healthy.jpg) center center no-repeat;
+    background-size: cover;
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    position: realtive;
+}
+
+/* Healthy package banner  */
+
+/* tab style */
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #dfe8eb;
+  width: 30%;
+  height: 1100px;
+  border-radius: 10px 0 0 10px;
+}
+
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 90%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  margin: 5%;
+  border-radius: 4px;
+}
+
+.tab button:hover {
+  background-color: #bee9f7;
+}
+
+.tab button.active {
+  background-color: #afca1f;
+}
+
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 1100px;
+  border-radius: 0 10px 10px 0;
+}
+.ul{
+    margin-bottom: 0rem !important;
+
+}
+.row{
+    margin-left: -23px !important;
+  
+}
+h4{
+    padding: 25px;
+}
+li{
+    list-style-type: none;
+    color: rgba(0, 0, 0, 0.909);
+}
+.container1{
+    background-color: #7fd5f5;
+}
+.mas{
+    list-style: disc;
+    color: rgba(0, 0, 0, 0.911);
+}
+/* hover img  start*/
+.p-img:hover {
+    transform: scale(0.9, 0.90);
+    box-shadow: -25px 30px 20px rgba(0, 0, 0, 0.5); 
+  }
+
+ /* card style */
+ .image img {
+    height: 5rem; /* Make the image fill the height of the container */
+    width: auto; /* Maintain the aspect ratio */
+    max-height: 200px; /* Limit the maximum height of the image */
+    
+}
+
+.sub-card {
+    box-sizing: border-box;
+     /*border: 1px solid rgb(199 199 199);*/
+    padding: 15px; 
+    border-radius: 5px;
+    width: 100%;
+}
+.sub-card button {
+    background-color: rgb(8, 150, 206);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+ /* end */
+/* nav bar changes start*/
+@media (max-width: 1055px) 
+{
+.px-5 {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+}
+}
+/* nav bar changes end */
+/* Health package Tab media Query Stat*/
+  @media screen and (min-width:770px) and (max-width:1300px){
+    .tab{
+        height: 830px;
+    }
+    .tabcontent {
+        height: 830px;
+    }
+    
+  }
+  @media screen and (min-width:375px) and (max-width:769px){
+    .tab{
+        height: 1250px;
+    }
+    .tabcontent {
+        height: 1250px;
+    }
+    
+  }
+/* Heath packages Tab Media Query End */
+  /* --------------------------------------------------------------------------------------------------------------- */
+  /* radiology */
+
+.project_item {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 25px;
+  }
+  
+  .project_item:hover > .thumb_title {
+    opacity: 1;
+  }
+  .project_item:hover > .thumb_title p,.project_item:hover > .thumb_title h1,.project_item:hover > .thumb_title h3,.project_item:hover > .thumb_title h5{
+    transform: scale(1);
+    transition: all 0.3s ease-out 0.1s;
+  }
+  .project_item:hover > .thumb_title{
+    transform: scale(1);
+    transition: all 0.3s ease-out 0s;
+
+  }
+  
+  
+  
+  
+  .project_item img {
+    display: block;
+    margin: 0 auto;
+    opacity: 1;
+    transition: .3s;
+  }
+  
+  .thumb_title {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    padding:6% 6% ;
+    transform: scale(0.5);
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow:auto;
+  }
+
+  .thumb_title::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .thumb_title p{
+    text-align :justify;
+    color:white;
+    padding: 4px;
+    transform: scale(0.5);
+    
+  }
+  .thumb_title h1{
+    transform: scale(0.5);
+  }
+  .thumb_title h3{
+    transform: scale(0.5);
+    
+  }
+  .thumb_title h5{
+    transform: scale(0.5);
+  }
+
+
+  .radiology img{
+    width: 45rem;
+    height: 35rem;
+  }
+  
+/* Dental */
+.image img {
+    height: 5rem; 
+    width: auto; 
+    max-height: 200px;
+}
+
+.sub-card {
+    
+    padding: 15px; 
+    border-radius: 5px;
+    width: 100%;
+    font-weight: 600px;
+}
+.sub-card button {
+    background-color: rgb(8, 150, 206);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+}
+.sub-card button:hover {
+    background:#afca1f;
+    border-color: #afca1f;
+
+}
+
+.sub-card button :hover {
+    background:#afca1f;
+    border-color:#afca1f;
+}
+.section-heading{
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #F0F0F0 100%);
+}
+.content_section .container-fluid:nth-child(even){
+   
+    background-image: linear-gradient(to right, rgba(241, 229, 229, 0), rgb(182, 172, 172));
+}
+/* dental close */
+/* header radiology Dental */
+.hero-header3 {
+    background: linear-gradient(rgba(9, 30, 62, .85), rgba(9, 30, 62, .85)), url(../img/banner\ radiology.jpg) center center no-repeat;
+    background-size: cover;
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    position:realtive;
+}
+.hero-header2 {
+    background: linear-gradient(rgba(9, 30, 62, .85), rgba(9, 30, 62, .85)), url(../img/dental\ banner.jpg) center center no-repeat;
+    background-size: cover;
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    position:realtive;
+}
+.footer-logo
+{
+	margin-top:-2rem;
+/* end */
